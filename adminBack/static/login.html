@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link type="text/css" rel=stylesheet href="css/style.css">
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body class="login-body">
+        <form class="login-form" id="form" >
+        <h2>登录页面</h2>
+            <div class="login-div"><label>用户名：<input class="login-input" id="name" name="name" type="text" placeholder="请输入用户名"></label></div>
+            <div class="login-div"><label>密&nbsp;&nbsp;&nbsp;码：<input class="login-input" id="passwd" name="passwd"  type="password" placeholder="请输入密码"></label></div>
+            <div class="login-div"><label>验证码：
+                    <input class="login-check" id="inputCode" type="text" placeholder="请输入验证码" onblur="checkCodes()"></label>
+                    <input class="check" type="button" id="checkCode" onclick="createCode()" title='点击更换验证码' />
+            </div>
+            <div class="submit"><a style="font-size: 14px" href="#" onclick="alert('请联系管理员！')">忘记密码</a>
+                <input type="button" id="sub" class="login-submit" onclick="loginSubmit()" value="提交"></div>
+            <div class="msg"><span id="msg"></span></div>
+        </form>
+</body>
+</html>
+<script type="text/javascript">
+    window.onload = function(){
+        createCode();
+    }
+
+</script>

@@ -1,0 +1,226 @@
+/**
+    对于登录页面样式的调整
+ */
+.login-body{
+    background-image: url(../img/bag.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.login-form{
+    background-color: lavender;
+    opacity:0.8;
+    width: 360px;
+    height: 250px;
+    margin-left: 35%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+h2{
+    padding-top: 5%;
+}
+.login-input{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width:150px ;
+    height: 20px;
+}
+.login-check{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width:85px ;
+    height: 20px;
+}
+
+.check{
+    /*border-radius: 1px;*/
+    /*padding-top: 10px;*/
+    /*width:30px ;*/
+    height: 30px;
+    width:52px;
+    /*font-size: 15px;*/
+    color: blue;
+    border: white;
+}
+.login-submit{
+    border-radius: 5px;
+    border: white;
+    margin-bottom: 10px;
+    width:100px ;
+    height: 28px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: dodgerblue;
+    margin-left: 25px;
+}
+.msg{
+    font-size: 15px;
+    color:red;
+    text-align: center;
+}
+.login-checkErr{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width:85px ;
+    height: 20px;
+    border: 1px solid red;
+}
+
+/**
+    index页面的布局
+ */
+.head{
+    width: 100%;
+    height: 80px;
+    background-color: #0575e0;
+    color: white;
+    border: white;
+    border-radius: 2px;
+    margin: 0;
+}
+.head > h1{
+    float: left;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+.head > p{
+    float: right;
+    margin-top: 40px;
+    margin-right: 5%;
+}
+
+.index-left{
+    border: 1px solid #c7cacd;
+    width: 13%;
+    height: 525px;
+    margin: 0;
+    float: left;
+}
+.index-right{
+    border: 1px solid #c7cacd;
+    float: right;
+    width: 86.5%;
+    height: 525px;
+    margin: 0;
+}
+iframe{
+    border: 0px solid white;
+}
+.index-left > ul{
+    padding: 0;
+    margin: 0;
+}
+.index-left > ul >li{
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: normal;
+    margin: 0;
+    /*color: rgba(170, 167, 167, 1);*/
+    border: 1px solid rgba(184, 180, 180, 0.3);
+}
+/*选中更改样式*/
+.index-left > ul >li:hover{
+    background-color: #6995e5;
+}
+.index-right>iframe{
+    width: 99%;
+    height: 99%;
+}
+.active{
+    background-color: #b9cff3;
+    color: blue;
+}
+/**
+    对表单页面样式的调整
+ */
+.query{
+    float: left;
+    margin: 1% 2%;
+}
+.query>label>input{
+    width: 120px;
+    border-radius: 2px;
+    border: 1px solid royalblue;
+
+}
+.query>input{
+    height: 25px;
+    color: whitesmoke;
+    background-color: #6995e5;
+    border-radius: 3px;
+    border: white;
+    width:50px;
+}
+.adminTable > thead > tr {
+    background-color: #dedfe0;
+}
+.adminTable > thead > tr > th{
+    border: 1px solid lightgray;
+    height: 40px;
+    line-height: 40px;
+    font-weight: normal;
+}
+.adminTable > tbody > tr > td{
+    border: 0.2px solid lightgray;
+    height: 35px;
+    line-height: 35px;
+    font-weight: normal;
+    text-align: center;
+    table-layout:fixed;
+    word-break:break-all;
+}
+.adminTable > tbody > tr:hover{
+   background-color: #dfe0f8;
+}
+.tableButton{
+    height: 25px;
+    color: whitesmoke;
+    background-color: #6995e5;
+    border-radius: 3px;
+    border: white;
+    width:50px;
+}
+.addAdmin{
+    font-weight: bolder;
+    font-size: 20px;
+    height: 50px;
+}
+/*新增页的样式*/
+.add-form{
+    background-color: lavender;
+    opacity:0.8;
+    width: 350px;
+    height: 400px;
+    margin-left: 35%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.add-input{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width:150px ;
+    height: 20px;
+}
+.add-sellects{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 20px;
+}
+.add-body{
+    background-image: url(../img/bag.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.err{
+    border: 1px solid red;
+}

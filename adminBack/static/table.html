@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link type="text/css" rel=stylesheet href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/layui.css"  media="all">
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/layui.js" charset="utf-8"></script>
+</head>
+<body style="margin: 0">
+    <div class="query"><label>名称查询：<input type="text" id="findName" ></label>
+        <input type="button" value="查询" id="subFindName" onclick="queryByName(1)"></div>
+    <div  class="query">生日查询：<label>起 <input type="date" id="findBirth1"></label>
+        <label>止 <input type="date" id="findBirth2"></label>
+        <input type="button" value="查询" id="subFindBirth" onclick="queryByBirth(1)"></div>
+    <div  class="query">
+        <label for="sex">性别查询：</label>
+        <select id="findSex">
+            <option>男</option>
+            <option>女</option>
+        </select>
+        <input type="button" value="查询" id="subFindSex" ONCLICK="queryBySex(1)"></div>
+    <table class="adminTable"  border="0" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width: 3%">ID</th>
+                <th style="width: 7%">名称</th>
+                <th style="width: 14%">密码</th>
+                <th style="width: 8%">生日</th>
+                <th style="width: 5%">性别</th>
+                <th style="width: 10%">电话</th>
+                <th style="width: 10%">邮箱</th>
+                <th style="width: 16%">地址</th>
+                <th style="width: 5%">学历</th>
+                <th style="width: 9%" onclick="queryAllByCreat(1)">创建时间<a style="color: #0000FF">&#8593;</a></th>
+                <th style="width: 9%" onclick="queryAllByModify(1)">修改时间<a style="color: #0000FF">&#8593;</a></th>
+                <th style="width: 5%">操作</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        <tr>
+            <td>1</td>
+            <td>lisi</td>
+            <td>123456</td>
+            <td>2020年5月20日</td>
+            <td>男</td>
+            <td>13333333333</td>
+            <td>666666@163.com</td>
+            <td>仙岳路</td>
+            <td>本科</td>
+            <td>2020.12.1 20:00:00</td>
+            <td>2020.12.1 20:00:00</td>
+            <td>
+                <input class="tableButton" type="button" value="修改" onclick="location='modify.html'">
+                <input class="tableButton" type="button" value="删除">
+            </td>
+        </tr>
+        </tbody>
+        <tr class="addAdmin">
+            <td colspan="12" id="adds" > +++新增用户+++</td>
+        </tr>
+    </table>
+    <div id="demo2" style="float: right;margin-right: 25px"></div>
+</body>
+</html>
+<script>
+    window.onload = function(){
+        queryAll(1)
+    }
+    function laypage(count,limit,num,curr){
+        layui.use(['laypage', 'layer'], function(){
+            var laypage = layui.laypage
+                ,layer = layui.layer;
+            laypage.render({
+                elem: 'demo2'
+                ,count: count
+                ,limit: limit
+                ,curr: curr
+                ,theme: '#6995e5'
+                ,jump:function (obj,first) {
+                    if (!first) {
+                        switch (num) {
+                            case 1:
+                                queryAll(obj.curr);
+                                break;
+                            case 2:
+                                queryByName(obj.curr);
+                                break;
+                            case 3:
+                                queryBySex(obj.curr);
+                                break;
+                            case 4:
+                                queryByBirth(obj.curr);
+                                break;
+                            case 5:
+                                queryAllByCreat(obj.curr);
+                                break;
+                            case 6:
+                                queryAllByModify(obj.curr);
+                                break;
+                        }
+                    }
+                }
+            });
+        });
+    }
+</script>

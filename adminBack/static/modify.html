@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+    <link type="text/css" rel=stylesheet href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body class="add-body">
+<form method="post" class="add-form" id="modifyfrom">
+    <h2 >添加用户</h2>
+    <div><label>I&nbsp;&nbsp;&nbsp;D：<input class="add-input" id="id" name="id" type="text" placeholder="1" disabled></label></div>
+    <div><label>名称：<input class="add-input" name="name" id="name" type="text" placeholder="请输入名称" ></label></div>
+    <div><label>密码：<input class="add-input" name="passwd" id="passwd"  type="password" placeholder="请输入密码"></label></div>
+    <div><label>生日：<input class="add-input" name="birthday" id="birthday" type="date"  ></label></div>
+    <div class="add-sellects"><label>性别：<select name="sex" id="sex" >
+                <option >男</option>
+                <option>女</option>
+            </select></label>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>学历：<select name="education" id="education">
+                <option>博士</option>
+                <option>硕士</option>
+                <option>本科</option>
+                <option>专科</option>
+                <option>高中</option>
+            </select></label></div>
+    <div><label>电话：<input class="add-input" name="phone" id="phone"  type="text" placeholder="请输入手机号"></label></div>
+    <div><label>邮箱：<input class="add-input" name="email" id="email" type="text" placeholder="请输入邮箱"></label></div>
+    <div><label>地址：<input class="add-input" name="addr" id="addr" type="text" placeholder="请输入地址"></label></div>
+    <div class="submit"><input type="button"  class="login-submit" onclick="location='table.html'" value="返回">
+        <input type="button" id="sub" class="login-submit" onclick="" value="提交"></div>
+    <div class="msg"><span id="msg"></span></div>
+</form>
+</body>
+<script>
+    $(function () {
+        $("#name").blur(checkName);
+        $("#passwd").blur(checkPasswd);
+        $("#birthday").blur(checkBirthday);
+        $("#phone").blur(checkPhone);
+        $("#email").blur(checkEmail);
+        $("#addr").blur(checkAddr);
+        $("#sub").click(subModify)
+        modifyInfo();
+    })
+</script>
+</html>
