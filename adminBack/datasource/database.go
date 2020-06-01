@@ -14,7 +14,7 @@ var (
 //连接数据库
 func connectMysql() (*sqlx.DB) {
 	//调用配置文件进行解析
-	if err := config.InitConfig("D:\\goProject\\adminBack\\config.json");err != nil{
+	if err := config.InitConfig("adminBack\\config.json");err != nil{
 		fmt.Printf(err.Error())
 	}
 	conf := config.DBConfig
